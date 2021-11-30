@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?-family=Comforter&family=Montserrat+Alternates:ital,wght@0,400;0,700;1,300&display=swap');
+
+body {
+    font-family: 'Comforter', cursive;
+    font-family: 'Montserrat Alternates', sans-serif;
+ }
+
+ /* SCSS HEX */
+$spicy-mix: #8d6743;
+$bastille: #1e1721;
+$hampton: #e6d6b1;
+$amethyst-smoke: #9b94ac;
+    
+// customize some Bootstrap variables
+$primary: $spicy-mix;
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color:$amethyst-smoke;
+}
