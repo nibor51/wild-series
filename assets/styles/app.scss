@@ -3,20 +3,39 @@
 body {
     font-family: 'Comforter', cursive;
     font-family: 'Montserrat Alternates', sans-serif;
- }
+}
 
- /* SCSS HEX */
+
+/* SCSS HEX */
 $spicy-mix: #8d6743;
 $bastille: #1e1721;
 $hampton: #e6d6b1;
 $amethyst-smoke: #9b94ac;
-    
+
+$dark: $bastille;
+$black: $bastille;
+$light: $hampton;
+$white: $hampton;
+
 // customize some Bootstrap variables
 $primary: $spicy-mix;
+$secondary: $amethyst-smoke;
 
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    background-color:$amethyst-smoke;
+    background-color: $secondary;
+    color: $black;
+}
+
+.title-website {
+    font-family: Comforter, cursive;
+    font-size: 2rem;
 }
