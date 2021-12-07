@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?-family=Comforter&family=Montserrat+Alternates:ital,wght@0,400;0,700;1,300&display=swap');
 
-body {
+h1 {
     font-family: 'Comforter', cursive;
+}
+body {
     font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+}
+h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+}
+q {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-style: italic;
 }
 
 
@@ -20,6 +31,9 @@ $white: $hampton;
 // customize some Bootstrap variables
 $primary: $spicy-mix;
 $secondary: $amethyst-smoke;
+$bs-font-sans-serif: 'Montserrat Alternates', sans-serif;
+$bs-font-monospace: 'Montserrat Alternates', sans-serif;
+
 
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
