@@ -34,23 +34,10 @@ class ProgramController extends AbstractController
      * @Route("/{id<^[0-9]+$>}", methods={"GET"}, name="show")
      * @return Response
      */
-    public function show(int $id): Response
+    public function show(Program $program): Response
     {
-        $program = $this->getDoctrine()
-            ->getRepository(Program::class)
-            ->findOneBy(['id' => $id]);
-
-        if (!$program) {
-            throw $this->createNotFoundException(
-                'No program found for id '.$id.' found in program\'s table.'
-            );
-        }
-
-        $seasons = $program->getSeasons();
-
         return $this->render('program/show.html.twig', [
             'program' => $program,
-            'seasons' => $seasons,
         ]);
     }
 
@@ -78,14 +65,11 @@ class ProgramController extends AbstractController
             throw $this->createNotFoundException(
                 'No season found for id '.$seasonId.' found in season\'s table.'
             );
-        }
-        $episodes = $season->getEpisodes();
-        
+        }    
 
         return $this->render('program/season_show.html.twig', [
             'program' => $program,
             'season' => $season,
-            'episodes' => $episodes,
         ]);
     }
 }
