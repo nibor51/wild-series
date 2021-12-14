@@ -79,9 +79,8 @@ class ProgramController extends AbstractController
                 'No season found for id '.$seasonId.' found in season\'s table.'
             );
         }
-        $episodes = $this->getDoctrine()
-            ->getRepository(Episode::class)
-            ->findBy(['Season' => $season]);
+        $episodes = $season->getEpisodes();
+        
 
         return $this->render('program/season_show.html.twig', [
             'program' => $program,
