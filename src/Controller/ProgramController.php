@@ -9,6 +9,8 @@ use App\Entity\Program;
 use App\Entity\Season;
 use App\Entity\Episode;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use App\Form\ProgramType;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @Route("/program", name="program_")
@@ -28,6 +30,37 @@ class ProgramController extends AbstractController
 
         return $this->render('program/index.html.twig', [
             'programs' => $programs
+        ]);
+    }
+
+    /**
+     * The controler for the program add form
+     * 
+     * @Route("/new", name="new")
+     */
+    public function new(Request $request) : Response
+    {
+        //Create a new program Object
+        $program = new program();
+        // Create the associated Form
+        $form = $this->createForm(ProgramType::class, $program);
+        //Get data from HTTP request
+        $form->handleRequest($request);
+        // Was the form submitted ?
+        if ($form->isSubmitted()) {
+            // Deal with the submitted data
+            // Get the Entity Manager
+            $entityManager = $this->getDoctrine()->getManager();
+            // Persist program Object
+            $entityManager->persist($program);
+            // Flush the persisted object
+            $entityManager->flush();
+            // Redirect to programs list
+            return $this->redirectToRoute('program_index');
+        }
+        // Render the form
+        return $this->render('program/new.html.twig', [
+            "form" => $form->createView(),
         ]);
     }
 
