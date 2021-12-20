@@ -13,20 +13,17 @@
     <div>
         {# Lien vers les série de la catégorie #}
         <a href="{{ path("category_show", { categoryName: category.name }) }}" class="btn btn-primary">{{ category.name }}</a>
-
     </div>
 
     {% else %}
-
         Aucune série trouvée.
-
     {% endfor %}
 
-
+    <a href="{{ path('category_new') }}" class="btn btn-primary">
+        Ajouter une catégorie
+    </a>
     <a href="{{ path('app_index') }}" class="btn btn-primary">
-
         Retour à l'accueil
-
     </a>
 
 {% endblock %}
