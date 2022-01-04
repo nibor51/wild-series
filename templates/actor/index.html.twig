@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ parent() }} - Actors {% endblock %}
+
+{% block body %}
+
+    {% for actor in actors %}
+
+    <div class="actor">
+        <p> {{ actor.lastname }} {{ actor.firstname }} </p>
+
+        {# Lien vers la fiche de l'acteur #}
+        <a href="{{ path("actor_show", { id: actor.id }) }}" class="btn btn-primary">Voir la fiche</a>
+    </div>
+
+    {% else %}
+        Aucune acteur trouvée.
+    {% endfor %}
+
+{% endblock %}

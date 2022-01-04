@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    {{ actor.firstname }} {{ actor.lastname }}
+{% endblock %}
+
+{% block body %}
+
+    <h1>{{ actor.firstname }} {{ actor.lastname }}</h1>
+
+    <p>{{ actor.birthDate|date("m/d/Y") }}</p>
+
+    {# <p>{{ actor.biography }}</p> #}
+
+    <p>
+        <a href="{{ path('actor_index') }}" class="btn btn-primary">Retour à la liste</a>
+        {# <a href="{{ path('actor_edit', { 'id': actor.id }) }}" class="btn btn-warning">Modifier</a> #}
+        {# <a href="{{ path('actor_delete', { 'id': actor.id }) }}" class="btn btn-danger">Supprimer</a> #}
+    </p>
+
+{% endblock %}
