@@ -5,6 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      {# LEFT CONTENT START #}
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{ path('app_index') }}">Home</a>
@@ -16,10 +17,26 @@
           <a class="nav-link" href="{{ path('category_index') }}">Catégories</a>
         </li>
       </ul>
-      <form class="d-flex me-auto">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-light" type="submit">Search</button>
-      </form>
+      {# START FORM SEARCH PROGRAM #}
+        {{ form_start
+          (form,
+            {'attr':
+              {
+              'class': 'd-flex me-auto',
+              'action': path('program_index')
+              }
+            }
+          )
+        }}
+        {{ form_widget
+          (form.search, {'attr': {'class': 'form-control me-2', 'type': 'search', 'aria-label': 'Search', 'placeholder': 'Recherche un program'}})
+        }}
+        <button class="btn btn-light">
+          Search
+        </button>
+        {{ form_end(form) }}
+      {# END FORM SEARCH PROGRAM #}
+      {# RIGHT CONTENT START #}
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" href="#">Inscription</a>
