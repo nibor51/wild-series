@@ -8,6 +8,9 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
+use App\Entity\Actor;
+use App\Entity\Season;
+use App\Entity\Category;
 
 /**
  * @ORM\Entity(repositoryClass=ProgramRepository::class)
@@ -156,7 +159,7 @@ class Program
     {
         if (!$this->actors->contains($actor)) {
             $this->actors[] = $actor;
-            $actor->addProgram($this);
+            $actor->setProgram($this);
         }
 
         return $this;

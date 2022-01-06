@@ -6,6 +6,7 @@ use App\Repository\ActorRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Program;
 
 /**
  * @ORM\Entity(repositoryClass=ActorRepository::class)
@@ -93,7 +94,7 @@ class Actor
         return $this->programs;
     }
 
-    public function addProgram(Program $program): self
+    public function setProgram(Program $program): self
     {
         if (!$this->programs->contains($program)) {
             $this->programs[] = $program;
@@ -107,5 +108,10 @@ class Actor
         $this->programs->removeElement($program);
 
         return $this;
+    }
+
+    public function getSelector() : string
+    {
+        return $this->getLastname() . ' ' . $this->getFirstname();
     }
 }
