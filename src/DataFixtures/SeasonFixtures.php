@@ -16,6 +16,72 @@ class SeasonFixtures extends Fixture implements DependentFixtureInterface
             'year' => '2019',
             'description' => 'Saison 1',
             'program' => 'program_0'
+        ],
+        [
+            'number' => 2,
+            'year' => '2019',
+            'description' => 'Saison 2',
+            'program' => 'program_0'
+        ],
+        [
+            'number' => 3,
+            'year' => '2019',
+            'description' => 'Saison 3',
+            'program' => 'program_0'
+        ],
+        [
+            'number' => 4,
+            'year' => '2019',
+            'description' => 'Saison 4',
+            'program' => 'program_0'
+        ],
+        [
+            'number' => 1,
+            'year' => '2019',
+            'description' => 'Saison 1',
+            'program' => 'program_1'
+        ],
+        [
+            'number' => 2,
+            'year' => '2019',
+            'description' => 'Saison 2',
+            'program' => 'program_1'
+        ],
+        [
+            'number' => 3,
+            'year' => '2019',
+            'description' => 'Saison 3',
+            'program' => 'program_1'
+        ],
+        [
+            'number' => 4,
+            'year' => '2019',
+            'description' => 'Saison 4',
+            'program' => 'program_1'
+        ],
+        [
+            'number' => 1,
+            'year' => '2019',
+            'description' => 'Saison 1',
+            'program' => 'program_2'
+        ],
+        [
+            'number' => 2,
+            'year' => '2019',
+            'description' => 'Saison 2',
+            'program' => 'program_2'
+        ],
+        [
+            'number' => 3,
+            'year' => '2019',
+            'description' => 'Saison 3',
+            'program' => 'program_2'
+        ],
+        [
+            'number' => 4,
+            'year' => '2019',
+            'description' => 'Saison 4',
+            'program' => 'program_2'
         ]
     ];
 

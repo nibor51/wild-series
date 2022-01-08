@@ -12,185 +12,185 @@ class EpisodeFixtures extends Fixture implements DependentFixtureInterface
 {
     public const EPISODES = [
         [
-            'title' => 'Episode 1',
+            'title' => '1',
             'number' => 1,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
             'seasonReference' => 'season_0'
         ],
 
         [
-            'title' => 'Episode 2',
+            'title' => '2',
+            'number' => 2,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '3',
+            'number' => 3,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '4',
+            'number' => 4,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '5',
+            'number' => 5,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '6',
+            'number' => 6,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '7',
+            'number' => 7,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '8',
+            'number' => 8,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '9',
+            'number' => 9,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '10',
+            'number' => 10,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '11',
+            'number' => 11,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '12',
+            'number' => 12,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '13',
+            'number' => 13,
+            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
+            'seasonReference' => 'season_0'
+        ],
+
+        [
+            'title' => '1',
             'number' => 1,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 3',
-            'number' => 1,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 4',
-            'number' => 1,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 5',
-            'number' => 1,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 6',
-            'number' => 1,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 7',
-            'number' => 1,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 8',
-            'number' => 1,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 9',
-            'number' => 1,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 10',
-            'number' => 1,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 11',
-            'number' => 1,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 12',
-            'number' => 1,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 13',
-            'number' => 1,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 1',
+            'title' => '2',
             'number' => 2,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 2',
-            'number' => 2,
+            'title' => '3',
+            'number' => 3,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 3',
-            'number' => 2,
+            'title' => '4',
+            'number' => 4,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 4',
-            'number' => 2,
+            'title' => '5',
+            'number' => 5,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 5',
-            'number' => 2,
+            'title' => '6',
+            'number' => 6,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 6',
-            'number' => 2,
+            'title' => '7',
+            'number' => 7,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 7',
-            'number' => 2,
+            'title' => '8',
+            'number' => 8,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 8',
-            'number' => 2,
+            'title' => '9',
+            'number' => 9,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 9',
-            'number' => 2,
+            'title' => '10',
+            'number' => 10,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 10',
-            'number' => 2,
+            'title' => '11',
+            'number' => 11,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 11',
-            'number' => 2,
+            'title' => '12',
+            'number' => 12,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ],
 
         [
-            'title' => 'Episode 12',
-            'number' => 2,
+            'title' => '13',
+            'number' => 13,
             'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
-        ],
-
-        [
-            'title' => 'Episode 13',
-            'number' => 2,
-            'synopsis' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis sint. Odio, eveniet quisquam debitis asperiores deserunt a facere quo, optio accusantium adipisci officia officiis aliquam similique eligendi voluptas quas!',
-            'seasonReference' => 'season_0'
+            'seasonReference' => 'season_1'
         ]
 
     ];

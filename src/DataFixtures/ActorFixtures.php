@@ -10,20 +10,30 @@ class ActorFixtures extends Fixture
 {
     public const ACTORS = [
         [
-            'firstname' => 'John',
-            'lastname' => 'Doe',
-            'birth_date' => '1970-01-01'
+            'firstname' => 'Norman',
+            'lastname' => 'Reedus',
+            'birth_date' => '1969-01-06'
         ],
         [
-            'firstname' => 'Jane',
-            'lastname' => 'Doe',
-            'birth_date' => '1980-01-01'
+            'firstname' => 'Andrew',
+            'lastname' => 'Lincoln',
+            'birth_date' => '1973-09-14'
         ],
         [
-            'firstname' => 'Jack',
-            'lastname' => 'Doe',
-            'birth_date' => '1990-01-01'
+            'firstname' => 'Lauren',
+            'lastname' => 'Cohan',
+            'birth_date' => '1982-01-07'
         ],
+        [
+            'firstname' => 'Maggie',
+            'lastname' => 'Reedus',
+            'birth_date' => '1985-01-07'
+        ],
+        [
+            'firstname' => 'Paul',
+            'lastname' => 'Reedus',
+            'birth_date' => '1989-01-07'
+        ]
     ];
 
     public function load(ObjectManager $manager): void
@@ -36,7 +46,7 @@ class ActorFixtures extends Fixture
 
             $manager->persist($actor);
 
-            // $this->addReference('actor_' . $key, $actor);
+            $this->addReference('actor_' . $key, $actor);
         }
 
         $manager->flush();
