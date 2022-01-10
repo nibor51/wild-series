@@ -4,7 +4,9 @@ namespace App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+
 use App\Entity\Actor;
+use App\Service\Slugify;
 
 class ActorFixtures extends Fixture
 {
@@ -36,6 +38,11 @@ class ActorFixtures extends Fixture
         ]
     ];
 
+    public function __construct(Slugify $slugify)
+    {
+        $this->slugify = $slugify;
+    }
+
     public function load(ObjectManager $manager): void
     {
         foreach (self::ACTORS as $key => $actorData) {
@@ -43,6 +50,8 @@ class ActorFixtures extends Fixture
             $actor->setFirstname($actorData['firstname']);
             $actor->setLastname($actorData['lastname']);
             $actor->setBirthDate(new \DateTime($actorData['birth_date']));
+
+            $actor->setSlug($this->slugify->generate($actor->getFirstname() . ' ' . $actor->getLastname()));
 
             $manager->persist($actor);
 

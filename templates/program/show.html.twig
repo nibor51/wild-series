@@ -18,7 +18,7 @@
             {% for season in program.seasons %}
                 <li class="season">
                     <h2>Saison {{ season.number }}</h2>
-                        <a href="{{ path('program_season_show', {'programId': program.id, 'seasonId': season.id}) }}">
+                        <a href="{{ path('program_season_show', {'programId': program.slug, 'seasonId': season.slug}) }}">
                             Voir fiche
                         </a>
                 </li>
@@ -29,7 +29,7 @@
         <ul>
             {% for actor in program.actors %}
                 <li>
-                    <a href="{{ path('actor_show', {'id': actor.id}) }}">
+                    <a href="{{ path('actor_show', {'slug': actor.slug}) }}">
                         {{ actor.firstname }} {{ actor.lastname }}
                     </a>
                 </li>

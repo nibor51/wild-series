@@ -10,7 +10,7 @@
         <p> {{ actor.lastname }} {{ actor.firstname }} </p>
 
         {# Lien vers la fiche de l'acteur #}
-        <a href="{{ path("actor_show", { id: actor.id }) }}" class="btn btn-primary">Voir la fiche</a>
+        <a href="{{ path("actor_show", { slug: actor.slug }) }}" class="btn btn-primary">Voir la fiche</a>
     </div>
 
     {% else %}

@@ -11,7 +11,7 @@
           <p>  {{ episode.synopsis }} </p>
      
 
-    <a href="{{ path('program_season_show', {'programId': program.id, 'seasonId': season.id}) }}" class="btn btn-primary">
+    <a href="{{ path('program_season_show', {'programId': program.slug, 'seasonId': season.slug}) }}" class="btn btn-primary">
         Retour à la fiche de la season
     </a>
 {% endblock %}

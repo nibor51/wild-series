@@ -2,14 +2,14 @@
 
 namespace App\Controller;
 
-use App\Entity\Actor;
-use App\Entity\Program;
-use App\Repository\ActorRepository;
-use App\Repository\ProgramRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use App\Entity\Actor;
+use App\Entity\Program;
+use App\Repository\ActorRepository;
+use App\Repository\ProgramRepository;
 
 /**
  * @Route("/actor", name="actor_")
@@ -33,7 +33,7 @@ class ActorController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="show")
+     * @Route("/{slug}", name="show")
      * @param Actor $actor
      * @return Response
      */
@@ -45,7 +45,7 @@ class ActorController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/programs", name="programs")
+     * @Route("/{slug}/programs", name="programs")
      * @param Actor $actor
      * @param ProgramRepository $programRepository
      * @return Response

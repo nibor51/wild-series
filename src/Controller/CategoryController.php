@@ -5,11 +5,13 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+
 use App\Entity\Category;
 use App\Repository\ProgramRepository;
 use App\Repository\CategoryRepository;
 use App\Form\CategoryType;
-use Symfony\Component\HttpFoundation\Request;
+use App\Service\Slugify;
 
 /**
  * @Route("/category", name="category_")
@@ -37,7 +39,7 @@ class CategoryController extends AbstractController
      * 
      * @Route("/new", name="new")
      */
-    public function new(Request $request) : Response
+    public function new(Request $request, Slugify $slugify) : Response
     {
         //Create a new Category Object
         $category = new Category();
@@ -50,6 +52,9 @@ class CategoryController extends AbstractController
             // Deal with the submitted data
             // Get the Entity Manager
             $entityManager = $this->getDoctrine()->getManager();
+            // Set the slug
+            $slug = $slugify->generate($category->getName());
+            $category->setSlug($slug);
             // Persist Category Object
             $entityManager->persist($category);
             // Flush the persisted object

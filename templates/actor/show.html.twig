@@ -14,8 +14,8 @@
 
     <p>
         <a href="{{ path('actor_index') }}" class="btn btn-primary">Retour à la liste</a>
-        {# <a href="{{ path('actor_edit', { 'id': actor.id }) }}" class="btn btn-warning">Modifier</a> #}
-        {# <a href="{{ path('actor_delete', { 'id': actor.id }) }}" class="btn btn-danger">Supprimer</a> #}
+        {# <a href="{{ path('actor_edit', { 'slug': actor.slug }) }}" class="btn btn-warning">Modifier</a> #}
+        {# <a href="{{ path('actor_delete', { 'slug': actor.slug }) }}" class="btn btn-danger">Supprimer</a> #}
     </p>
 
     <h2>Programmes</h2>
@@ -23,7 +23,7 @@
     <ul>
         {% for program in actor.programs %}
             <li>
-                <a href="{{ path('program_show', {'id': program.id}) }}">
+                <a href="{{ path('program_show', {'slug': program.slug}) }}">
                     {{ program.title }}
                 </a>
             </li>
