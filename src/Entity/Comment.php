@@ -19,6 +19,7 @@ class Comment
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="comments")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $author;
 
@@ -26,7 +27,7 @@ class Comment
      * @ORM\ManyToOne(targetEntity=Episode::class, inversedBy="comments")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $episode_id;
+    private $episode;
 
     /**
      * @ORM\Column(type="text")
@@ -43,26 +44,26 @@ class Comment
         return $this->id;
     }
 
-    public function getAuthor(): ?User
+    public function getAuthor(): User
     {
         return $this->author;
     }
 
-    public function setAuthor(?User $author): self
+    public function setAuthor(User $author): self
     {
         $this->author = $author;
 
         return $this;
     }
 
-    public function getEpisodeId(): ?Episode
+    public function getEpisode(): Episode
     {
-        return $this->episode_id;
+        return $this->episode;
     }
 
-    public function setEpisodeId(?Episode $episode_id): self
+    public function setEpisode(Episode $episode): self
     {
-        $this->episode_id = $episode_id;
+        $this->episode = $episode;
 
         return $this;
     }

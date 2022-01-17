@@ -48,7 +48,7 @@ class Episode
     private $slug;
 
     /**
-     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="episode_id", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="episode", orphanRemoval=true)
      */
     private $comments;
 
@@ -134,7 +134,7 @@ class Episode
     {
         if (!$this->comments->contains($comment)) {
             $this->comments[] = $comment;
-            $comment->setEpisodeId($this);
+            $comment->setEpisode($this);
         }
 
         return $this;
@@ -142,13 +142,6 @@ class Episode
 
     public function removeComment(Comment $comment): self
     {
-        if ($this->comments->removeElement($comment)) {
-            // set the owning side to null (unless already changed)
-            if ($comment->getEpisodeId() === $this) {
-                $comment->setEpisodeId(null);
-            }
-        }
-
         return $this;
     }
 }
