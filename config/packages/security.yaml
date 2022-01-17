@@ -23,6 +23,8 @@ security:
             form_login:
                 login_path: login
                 check_path: login
+            logout:
+                path: app_logout
         secured_area:
             form_login:
                 enable_csrf: true
