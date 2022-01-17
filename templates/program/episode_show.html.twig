@@ -7,9 +7,18 @@
 {% block body %}
     <h1>{{ program.title }} - Season {{ season.number }}</h1>
         
-            <h2>Épisode {{ episode.number }} : {{ episode.title }}</h2>
-          <p>  {{ episode.synopsis }} </p>
+    <h2>Épisode {{ episode.number }} : {{ episode.title }}</h2>
+    <p>  {{ episode.synopsis }} </p>
      
+    {% if app.user %}
+       <p>Ajouter un commentaire</p>
+       <form action="{{ path('program_episode_show', {'programId': program.slug, 'seasonId': season.slug, 'episodeId': episode.slug}) }}" method="post">
+            {{ form_widget(form) }}
+         <button type="submit" class="btn btn-primary">Commenter</button>
+        </form>
+    {% else %}
+      <p>Connectez-vous pour commenter</p>
+    {% endif %}
 
     <a href="{{ path('program_season_show', {'programId': program.slug, 'seasonId': season.slug}) }}" class="btn btn-primary">
         Retour à la fiche de la season
