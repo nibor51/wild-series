@@ -23,7 +23,7 @@
       <ul class="navbar-nav mb-2 mb-lg-0">
         {% if app.user %}
           <li class="nav-item">
-            <p class="nav-link">{{ app.user.email}}</p>
+            <a class="nav-link" href="{{ path('profile') }}" >{{ app.user.email}}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ path('app_logout') }}">Logout</a>
@@ -33,7 +33,7 @@
             <a class="nav-link" href="{{ path('login') }}">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+            <a class="nav-link" href="{{ path('register') }}">Register</a>
           </li>
         {% endif %}
       </ul>
