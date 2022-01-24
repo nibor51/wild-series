@@ -1,6 +1,25 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <h1>Bienvenue !</h1>
+    <h1>Bienvenue sur Wild Series !</h1>
+    <p>
+        Vous pouvez consulter les séries que vous avez déjà regardées,
+        les ajouter à votre liste de séries à regarder,
+        ou les ajouter à votre liste de séries à voir.
+    </p>
+    <div class="card-container">
+        <h4>Dernière série ajouter</h2>
+        {# make card with program info here #}
+        {% for program in programs %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ program.title }}</h5>
+                    <p class="card-text">{{ program.summary }}</p>
+                    <a href="{{ path('program_show', {'slug': program.slug}) }}" class="btn btn-primary">Voir la série</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
     <img src="{{ asset('build/images/logo.png') }}" alt="logo"/>
 {% endblock %}

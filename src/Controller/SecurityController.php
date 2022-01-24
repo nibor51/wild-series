@@ -12,7 +12,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
-class LoginController extends AbstractController
+class SecurityController extends AbstractController
 {
     #[Route('/login', name: 'login')]
     public function index(AuthenticationUtils $authenticationUtils): Response
@@ -23,7 +23,7 @@ class LoginController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('login/index.html.twig', [
+        return $this->render('security/login.html.twig', [
             'last_username' => $lastUsername,
             'error' => $error
         ]);
@@ -52,7 +52,7 @@ class LoginController extends AbstractController
             return $this->redirectToRoute('app_index');
         }
 
-        return $this->render('login/register.html.twig', [
+        return $this->render('security/register.html.twig', [
             'registrationForm' => $form->createView(),
         ]);
     }
