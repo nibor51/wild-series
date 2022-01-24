@@ -178,4 +178,18 @@ class ProgramController extends AbstractController
             'form' => $form,
         ]);
     }
+
+    /**
+     * @Route("/{id}", methods={"POST"}, name="delete")
+     * @return Response
+     */
+    public function delete(Program $program, Request $request, EntityManagerInterface $em) : Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$program->getId(), $request->request->get('_token'))) {
+            $em->remove($program);
+            $em->flush();
+        }
+
+        return $this->redirectToRoute('program_index', [], Response::HTTP_SEE_OTHER);
+    }
 }
