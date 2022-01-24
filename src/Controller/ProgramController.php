@@ -149,4 +149,25 @@ class ProgramController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    /**
+     * @Route("/{slug}/edit", methods={"GET", "POST"}, name="edit")
+     * @return Response
+     */
+    public function edit(Program $program, Request $request, Slugify $slugify, EntityManagerInterface $em) : Response
+    {
+            $form = $this->createForm(ProgramType::class, $program);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {
+                $em->flush();
+    
+                return $this->redirectToRoute('program_index', [], Response::HTTP_SEE_OTHER);
+            }
+    
+            return $this->renderForm('program/edit.html.twig', [
+                'program' => $program,
+                'form' => $form,
+            ]);
+    }
 }
