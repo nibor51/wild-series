@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
@@ -62,6 +63,8 @@ class ProgramController extends AbstractController
             // Set the slug
             $slug = $slugify->generate($program->getTitle());
             $program->setSlug($slug);
+            // Set program's owner
+            $program->setOwner($this->getUser());
             // Persist program Object
             $entityManager->persist($program);
             // Flush the persisted object
@@ -156,18 +159,23 @@ class ProgramController extends AbstractController
      */
     public function edit(Program $program, Request $request, Slugify $slugify, EntityManagerInterface $em) : Response
     {
-            $form = $this->createForm(ProgramType::class, $program);
-            $form->handleRequest($request);
-    
-            if ($form->isSubmitted() && $form->isValid()) {
-                $em->flush();
-    
-                return $this->redirectToRoute('program_index', [], Response::HTTP_SEE_OTHER);
-            }
-    
-            return $this->renderForm('program/edit.html.twig', [
-                'program' => $program,
-                'form' => $form,
-            ]);
+        // check if the user is the owner of the program
+        if ($this->getUser() !== $program->getOwner()) {
+            // If not, throw an exception
+            throw new AccessDeniedException('You are not the owner of this program');
+        }
+        $form = $this->createForm(ProgramType::class, $program);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em->flush();
+
+            return $this->redirectToRoute('program_index', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->renderForm('program/edit.html.twig', [
+            'program' => $program,
+            'form' => $form,
+        ]);
     }
 }
